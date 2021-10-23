@@ -40,4 +40,20 @@ def draw():
             drawn_number_list.append(drawn_number)
     return drawn_number_list
 
-print(draw())
+def lotto():
+    '''Main function with our program.'''
+    chosen_numbers_list = sort_number()
+    print(f"Chosen numbers: {chosen_numbers_list}")
+    drawn_numbers_list = draw()
+    print(f"Drawn numbers: {drawn_numbers_list}")
+    counter = 0
+    for number in chosen_numbers_list:
+        if number in drawn_numbers_list:
+            counter += 1
+    if counter >= 3:
+        print(f"Congratulations! You guessed {counter} numbers!")
+    else:
+        print(f"Sorry.. You lost..You guessed {counter} {'number' if counter == 1 else 'numbers'}")
+
+if __name__ == "__main__":
+    lotto()
