@@ -29,3 +29,15 @@ def sort_number():
     chosen_numbers.sort()
     return chosen_numbers
 
+def draw():
+    '''Computer draws 6 different numbers
+    :return: list with 6 random numbers
+    '''
+    drawn_number_list = []
+    while len(drawn_number_list) <6:
+        drawn_number = random.randint(1,49)
+        if drawn_number not in drawn_number_list:
+            drawn_number_list.append(drawn_number)
+    return drawn_number_list
+
+print(draw())
