@@ -23,3 +23,9 @@ def get_number():
             print("Enter a number!")
     return chosen_numbers
 
+def sort_number():
+    '''Returns given numbers with ascending order '''
+    chosen_numbers = get_number()
+    chosen_numbers.sort()
+    return chosen_numbers
+
